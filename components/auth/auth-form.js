@@ -45,7 +45,9 @@ function AuthForm() {
         password: enteredPassword,
       });
 
-      console.log(result);
+      if (!result.error) {
+        // set some auth state
+      }
     } else {
       try {
         const result = await createUser(enteredEmail, enteredPassword);
